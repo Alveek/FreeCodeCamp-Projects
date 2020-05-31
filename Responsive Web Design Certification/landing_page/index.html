@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header id="header">
+      <nav id="nav-bar">
+        <div class="brand-logo">
+          <img id="header-img" src="img/paw-print-.svg" alt="">
+        </div>
+
+        <a onclick="showMenu()" class="menu-btn"><i class="fas fa-bars"></i></a>
+
+        <div id="menu" class="menu">
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#video">Funny video</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
+          <a href=""><button type="submit" class="btn">SIGN UP</button></a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="top">
+      <div class="top-img">
+        <h1>Finally, the best app<br> for your pets</h1>
+        <button class="btn_start">START NOW</button>
+      </div>
+    </div>
+
+    <section class="features" id="features">
+      <div class="features-info">
+        <h2>It's 3am, time to create some chaos munch on tasty moths.</h2>
+        <p>Cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog claw drapes.</p>
+      </div>
+
+      <div class="features-grid-container">
+        <div class="feature-card">
+          <h3>Header</h3>
+          <p>White cat sleeps on a black shirt curl into a furry donut so meow meow mama. Cat is love, cat is life poop
+            on grasses.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Header</h3>
+          <p>Run around the house at 4 in the morning hopped up on catnip, but nya nya nyan. Run around the house at 4
+            in the morning headbutt owner's knee. Curl into a furry donut ears back wide eyed for see owner.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Header</h3>
+          <p>Meowwww purr like an angel but pounce on unsuspecting person so shove bum in owner's face like camera lens
+            or flex claws on the human's belly and purr like a lawnmower.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Header</h3>
+          <p>Groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of
+            the day - checked present belly, scratch hand when stroked spot something, big eyes, big eyes, crouch,
+            shake butt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="video">
+      <h2>Look at our happy customers!</h2>
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/EtH9Yllzjcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </section>
+
+
+    <section class="plan">
+      <h2 id="pricing">Select your plan</h2>
+
+      <div class="plan-container">
+
+        <div class="plan-card">
+          <i class="fas fa-cat"></i>
+          <h3>Brad Kitt</h3>
+          <p class="price">FREE</p>
+          <p>Yowling nonstop the whole night if human is on laptop sit on the keyboard behind the couch.</p>
+          <button class="btn">Start now!</button>
+        </div>
+
+        <div class="plan-card">
+          <i class="fas fa-cat"></i>
+          <h3>Bob Meowerly</h3>
+          <p class="price">$5/<span>month</span></p>
+          <p>Stuff and things stand with legs in litter box, but poop outside or throwup on your pillow.</p>
+          <button class="btn">Start now!</button>
+        </div>
+
+        <div class="plan-card">
+          <i class="fas fa-cat"></i>
+          <h3>The Great Catsby</h3>
+          <p class="price">$10/<span>month</span></p>
+          <p>Mark territory loves cheeseburgers but eat and than sleep on your face, or purr.</p>
+          <button class="btn">Start now!</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <h2>Do you want to recieve our cool newsletter?</h2>
+      <form action="https://www.freecodecamp.com/email-submit" method="GET" id="form">
+        <input id="email" class="tbox" type="email" name="email" placeholder="Enter your email here" required>
+        <input id="submit" class="sub-btn" type="submit" value="YES!">
+      </form>
+    </section>
+
+    <footer>
+      <p>FCC: Product Landing Page project</p>
+    </footer>
+  </div>
+
+
+  <script type="text/javascript">
+    function showMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
