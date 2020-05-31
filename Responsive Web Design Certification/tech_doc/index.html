@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Technical Documentation Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main id="main-doc">
+
+    <nav id="navbar">
+      <header>
+        <h1>Express/Node introduction</h1>
+      </header>
+
+      <a class="nav-link" href="#Introducing_Node">Introducing Node</a>
+      <a class="nav-link" href="#Hello_Node.js">Hello Node.js</a>
+      <a class="nav-link" href="#Web_Frameworks">Web Frameworks</a>
+      <a class="nav-link" href="#Introducing_Express">Introducing Express</a>
+      <a class="nav-link" href="#Where_did_Node_and_Express_come_from?">Where did Node and Express come from?</a>
+      <a class="nav-link" href="#How_popular_are_Node_and_Express?">How popular are Node and Express?</a>
+
+    </nav>
+
+    <div id="content">
+      <section class="main-section" id="Introducing_Node">
+        <header>
+          <h2>Introducing Node</h2>
+        </header>
+        <p>
+          Node (or more formally Node.js) is an open-source, cross-platform, runtime environment that allows developers
+          to create all kinds of server-side tools and applications in JavaScript. The runtime is intended for use
+          outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment
+          omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file
+          system libraries.</p>
+
+        <p>From a web server development perspective Node has a number of benefits:</p>
+        <ul>
+          <li>Great performance! Node was designed to optimize throughput and scalability in web applications and is a
+            good solution for many common web-development problems (e.g. real-time web applications).</li>
+          <li>Code is written in "plain old JavaScript", which means that less time is spent dealing with "context
+            shift" between languages when you're writing both client-side and server-side code.</li>
+          <li>JavaScript is a relatively new programming language and benefits from improvements in language design
+            when compared to other traditional web-server languages (e.g. Python, PHP, etc.) Many other new and popular
+            languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript,
+            Scala, LiveScript, etc.</li>
+          <li>The node package manager (NPM) provides access to hundreds of thousands of reusable packages. It also has
+            best-in-class dependency resolution and can also be used to automate most of the build toolchain.</li>
+          <li>Node.js is portable. It is available on Microsoft Windows, macOS, Linux, Solaris, FreeBSD, OpenBSD,
+            WebOS, and NonStop OS. Furthermore, it is well-supported by many web hosting providers, that often provide
+            specific infrastructure and documentation for hosting Node sites.</li>
+          <li>It has a very active third party ecosystem and developer community, with lots of people who are willing
+            to help.</li>
+        </ul>
+
+        <p>You can use Node.js to create a simple web server using the Node HTTP package.</p>
+      </section>
+
+      <section class="main-section" id="Hello_Node.js">
+        <header>
+          <h2>Hello Node.js</h2>
+        </header>
+
+        <p>The following example creates a web server that listens for any kind of HTTP request on the URL <code>http://127.0.0.1:8000/</code>
+          — when a request is received, the script will respond with the string: "Hello World". If you have already
+          installed node, you can follow these steps to try out the example:</p>
+        <ol>
+          <li>Open Terminal (on Windows, open the command line utility)</li>
+          <li>Create the folder where you want to save the program, for example, "test-node" and then enter it by
+            entering the following command into your terminal: <br>
+            <code>cd test-node</code></li>
+          <li>Using your favorite text editor, create a file called "hello.js" and paste the following code into it:
+            <br>
+            <code>
+              // Load HTTP module <br>
+              var http = require("http");<br>
+
+              // Create HTTP server and listen on port 8000 for requests <br>
+              http.createServer(function (request, response) { <br>
+
+              // Set the response HTTP header with HTTP status and Content type <br>
+              response.writeHead(200, {'Content-Type': 'text/plain'}); <br>
+
+              // Send the response body "Hello World" <br>
+              response.end('Hello World\n'); <br>
+              }).listen(8000);<br>
+
+              // Print URL for accessing server<br>
+              console.log('Server running at http://127.0.0.1:8000/');<br>
+            </code>
+          </li>
+          <li>Save the file in the folder you created above</li>
+          <li>Go back to the terminal and type the following command: <br>
+            <code>node "hello.js"</code></li>
+        </ol>
+        <p>Finally, navigate to <code>"http://localhost:8000"</code> in your web browser; you should see the text
+          "Hello World" in the upper left of an otherwise empty web page.</p>
+      </section>
+
+      <section class="main-section" id="Web_Frameworks">
+        <header>
+          <h2>Web Frameworks</h2>
+        </header>
+
+        <p>Other common web-development tasks are not directly supported by Node itself. If you want to add specific
+          handling for different HTTP verbs (e.g. <code>GET</code>, <code>POST</code>, <code>DELETE</code>, etc.),
+          separately handle requests at different URL paths ("routes"), serve static files, or use templates to
+          dynamically create the response, then you will need to write the code yourself, or you can avoid reinventing
+          the wheel and use a web framework!</p>
+      </section>
+
+      <section class="main-section" id="Introducing_Express">
+        <header>
+          <h2>Introducing Express</h2>
+        </header>
+
+        <p>Express is the most popular Node web framework, and is the underlying library for a number of other popular
+          Node web frameworks. It provides mechanisms to:</p>
+        <ul>
+          <li>Write handlers for requests with different HTTP verbs at different URL paths (routes).</li>
+          <li>Integrate with "view" rendering engines in order to generate responses by inserting data into templates.</li>
+          <li>Set common web application settings like the port to use for connecting, and the location of templates
+            that are used for rendering the response.</li>
+          <li>Add additional request processing "middleware" at any point within the request handling pipeline.</li>
+        </ul>
+        <p>While Express itself is fairly minimalist, developers have created compatible middleware packages to address
+          almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL
+          parameters, POST data, security headers, and many more. You can find a list of middleware packages maintained
+          by the Express team at Express Middleware (along with a list of some popular 3rd party packages).</p>
+      </section>
+
+      <section class="main-section" id="Where_did_Node_and_Express_come_from?">
+        <header>
+          <h2>Where did Node and Express come from?</h2>
+        </header>
+
+        <p>Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and
+          native Windows support was added in 2012. The current LTS release is Node v8.11.3 while the latest release is
+          Node 10.7.0. This is a tiny snapshot of a rich history; delve into Wikipedia if you want to know more</p>
+
+        <p>Express was initially released in November 2010 and is currently on version 4.16.3 of the API. You can check
+          out the changelog for information about changes in the current release, and GitHub for more detailed
+          historical release notes.</p>
+      </section>
+
+      <section class="main-section" id="How_popular_are_Node_and_Express?">
+        <header>
+          <h2>How popular are Node and Express?</h2>
+        </header>
+
+        <p>The popularity of a web framework is important because it is an indicator of whether it will continue to be
+          maintained, and what resources are likely to be available in terms of documentation, add-on libraries, and
+          technical support.</p>
+
+        <p>There isn't any readily-available and definitive measurement of the popularity of server-side frameworks
+          (although sites like Hot Frameworks attempt to assess popularity using mechanisms like counting the number of
+          GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express
+          are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get
+          help if you need it? Is there an opportunity for you to get paid work if you learn Express?</p>
+
+        <p>Based on the number of high profile companies that use Express, the number of people contributing to the
+          codebase, and the number of people providing both free and paid for support, then yes, Express is a popular
+          framework!</p>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  min-height: 100%;
+  margin: 0;
+  /* overflow: auto; */
+}
+
+body {
+  background-image: url('img/alveek\ .png')
+}
+
+.wrapper {
+  display: grid;
+  height: 100vh;
+  align-content: space-between;
+}
+
+#title {
+  text-align: center;
+  background-color: lightskyblue;
+  margin: 0;
+  padding: 14px 0 14px 0;
+  letter-spacing: 4px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px gray;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+#survey-form {
+  background: rgba(255, 255, 255, 0.3);
+  max-width: 880px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  padding-left: 5px;
+  border: 1px solid lightskyblue;
+  font-size: 1.1em;
+  box-shadow: 2px 5px 6px -1px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 2px 5px 6px -1px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 2px 5px 6px -1px rgba(0, 0, 0, 0.58);
+}
+
+.col-1 {
+  grid-column: 1/2;
+  text-align: right;
+  justify-self: end;
+}
+
+.col-2 {
+  grid-column: 2/3;
+  justify-self: start;
+  align-self: center;
+}
+
+#desctiption {
+  font-size: 1.2em;
+}
+
+#description,
+#submit {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+button[type=submit] {
+  width: 130px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 1px solid white;
+  font-size: 1.1em;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+input {
+  font-size: 14px;
+
+}
+
+input#name,
+input#email,
+input#number,
+#dropdown,
+#dropdown-2 {
+  width: 300px;
+  height: 32px;
+  padding-left: 10px;
+}
+
+textarea {
+  height: 70px;
+  width: 300px;
+}
+
+footer {
+  background-color: lightskyblue;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+@media all and (max-width: 550px) {
+  #survey-form {
+    /* background-color: cornflowerblue; */
+    grid-template-columns: 1fr;
+
+  }
+
+  .col-1,
+  .col-2 {
+    grid-column: 1 / -1;
+    justify-self: start;
+    text-align: left;
+    margin-left: 30px;
+
+  }
+
+  .col-2 {
+    margin-bottom: 14px;
+    margin-top: -8px;
+
+  }
+
+  textarea {
+    width: 85%;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  input#name,
+  input#email,
+  input#number,
+  #dropdown,
+  #dropdown-2 {
+    width: 85%;
+  }
+
+  #description {
+    text-align: center;
+  }
+
+}

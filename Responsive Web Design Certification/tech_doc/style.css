@@ -1,0 +1,75 @@
+/* https://codepen.io/claireparker/pen/bvWKdr */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  font-size: 14px;
+}
+
+
+main {
+  display: flex;
+  font-size: 1.2em;
+
+
+}
+
+#navbar {
+  display: grid;
+  align-content: start;
+  width: 300px;
+  position: sticky;
+  top: 0px;
+  overflow: auto;
+  height: 100vh;
+  border-right: 2px solid gray;
+
+}
+
+header {
+  text-align: center;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0 10px 20px;
+  border-bottom: 2px solid #444;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 0 20px;
+  text-align: justify;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  #navbar {
+    width: 100vw;
+    height: 300px;
+    overflow: scroll;
+    position: relative;
+    border-right: none;
+  }
+
+  #content {
+    width: 100vw;
+    padding: 0 10px;
+  }
+
+}

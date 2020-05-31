@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 id="title">Survey Form</h1>
+    </header>
+
+    <form id="survey-form">
+      <p id="description">Let us know how we can improve freeCodeCamp</p>
+
+      <label class="col-1" for="name" id="name-label">*Name: </label>
+      <input class="col-2" id="name" type="text" name="name" placeholder="Enter your name" required />
+
+      <label class="col-1" for="email" id="email-label">*Email: </label>
+      <input class="col-2" id="email" type="email" name="name" placeholder="Enter your email" pattern=".+@beststartupever.com"
+        required />
+
+      <label class="col-1" for="number" id="number-label">*Age: </label>
+      <input class="col-2" id="number" type="number" name="name" placeholder="Age" min="18" max="99" required />
+
+      <label class="col-1" for="dropdown">Which option best describes your current role?</label>
+      <select class="col-2" id="dropdown">
+        <ul>
+          <li>
+            <option value="Full time job">Full time job</option>
+          </li>
+          <li>
+            <option value="Full time job">Full time job</option>
+          </li>
+          <li>
+            <option value="Full time learner">Full time learner</option>
+          </li>
+        </ul>
+      </select>
+
+      <label class="col-1">How likely is that you would recommend FCC to a friend?</label>
+      <ul class="col-2">
+        <li>
+          <input type="radio" name="recommend" value="Definitely" /> Definitely
+        </li>
+        <li>
+          <input type="radio" name="recommend" value="Maybe" /> Maybe
+        </li>
+        <li>
+          <input type="radio" name="recommend" value="Not Sure" /> Not sure
+        </li>
+      </ul>
+
+      <label class="col-1" for="dropdown-2">What would you like most in FCC</label>
+      <select class="col-2" id="dropdown-2">
+        <option value="">Select an option</option>
+        <option value="Challenges">Challenges</option>
+        <option value="Projects">Projects</option>
+      </select>
+
+      <label class="col-1">Things that should be improved in the future (Check all that apply):
+      </label>
+      <ul class="col-2">
+        <li><input type="checkbox" name="improvements" value="Front-end Projects" />
+          Front-end Projects</li>
+        <li><input type="checkbox" name="improvements" value="Back-end Projects" />
+          Back-end Projects</li>
+        <li><input type="checkbox" name="improvements" value="Data Visualization" />
+          Data Visualization</li>
+        <li><input type="checkbox" name="improvements" value="Videos" />
+          Videos</li>
+        <li><input type="checkbox" name="improvements" value="Forum" />
+          Forum</li>
+        <li><input type="checkbox" name="improvements" value="Open source" /> Open
+          source</li>
+      </ul>
+
+
+      <label class="col-1">Any Comments or Suggestions?</label>
+      <textarea class="col-2" placeholder="Enter your comments here"></textarea>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <p>I just copied text from FCC survey form. After all, my task is to write code, right?</p>
+    </footer>
+  </div>
+
+
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+</body>
+
+</html>
