@@ -4,6 +4,9 @@
 ## 1 - [Tribute Page](https://codepen.io/Alveek/pen/dQyjzB)
 В данном проекте нужно было посвятить страничку какой-нибудь личности. Я выбрал Ван Гога. На тот момент я читал его письма к брату Тео и был очень впечатлен.
 
+![Van Gogh gif](https://github.com/Alveek/FreeCodeCamp-Projects/blob/master/Van%20Gogh%20Tribute.gif?raw=true)
+
+
 ## 2 - [Build a Survey Form](https://codepen.io/Alveek/pen/dQXdML)
 Здесь задача построить опросник.
 
